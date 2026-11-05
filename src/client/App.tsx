@@ -1,10 +1,19 @@
-import { PingIndex } from "@/client/components/app/ping";
+import type { ComponentType } from "react";
+
+import { BounceGameIndex } from "@/client/components/app/bounceGame";
 
 import "@/client/index.css";
 
-export const App = () => (
-  <main className="flex min-h-screen flex-col items-center justify-center gap-6 px-4">
-    <h1 className="text-2xl font-bold text-primary">Bun + React</h1>
-    <PingIndex />
-  </main>
-);
+// pathname -> page
+const PAGES: Record<string, ComponentType> = {
+  "/bounceGame": BounceGameIndex,
+};
+
+export const App = () => {
+  const Page = PAGES[window.location.pathname];
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-center gap-6 px-4 py-6">
+      {Page ? <Page /> : <p className="text-muted-foreground">page not found</p>}
+    </main>
+  );
+};

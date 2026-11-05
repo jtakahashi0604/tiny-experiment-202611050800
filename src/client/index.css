@@ -29,25 +29,25 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-/* design tokens */
+/* design tokens: black / white only */
 /* prettier-ignore */
 :root {
   --radius:               0.5rem;
 
   --background:           #ffffff;
-  --foreground:           #1f2937;
-  --primary:              #1e5eff;
+  --foreground:           #000000;
+  --primary:              #000000;
   --primary-foreground:   #ffffff;
-  --accent:               #ffd84d;
-  --accent-foreground:    #1f2937;
-  --secondary:            #f3f4f6;
-  --secondary-foreground: #1f2937;
-  --muted:                #f3f4f6;
-  --muted-foreground:     #6b7280;
-  --destructive:          #dc2626;
-  --border:               #e5e7eb;
-  --input:                #e5e7eb;
-  --ring:                 #1e5eff;
+  --accent:               #000000;
+  --accent-foreground:    #ffffff;
+  --secondary:            #ffffff;
+  --secondary-foreground: #000000;
+  --muted:                #ffffff;
+  --muted-foreground:     #000000;
+  --destructive:          #000000;
+  --border:               #000000;
+  --input:                #000000;
+  --ring:                 #000000;
 }
 
 @layer base {
