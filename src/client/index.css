@@ -1,0 +1,65 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+  --font-sans: "M PLUS 1 Code", ui-monospace, monospace;
+  --font-mono: "M PLUS 1 Code", ui-monospace, monospace;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --leading-normal: 1.75;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* design tokens */
+/* prettier-ignore */
+:root {
+  --radius:               0.5rem;
+
+  --background:           #ffffff;
+  --foreground:           #1f2937;
+  --primary:              #1e5eff;
+  --primary-foreground:   #ffffff;
+  --accent:               #ffd84d;
+  --accent-foreground:    #1f2937;
+  --secondary:            #f3f4f6;
+  --secondary-foreground: #1f2937;
+  --muted:                #f3f4f6;
+  --muted-foreground:     #6b7280;
+  --destructive:          #dc2626;
+  --border:               #e5e7eb;
+  --input:                #e5e7eb;
+  --ring:                 #1e5eff;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply font-sans leading-normal;
+  }
+
+  body {
+    @apply min-h-screen bg-background text-foreground;
+  }
+}
